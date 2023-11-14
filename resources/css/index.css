@@ -1,0 +1,314 @@
+
+header,footer {
+    padding: 20px 5%;
+    background: rgba(255,255,255,1);
+    border: 1px solid #cccccc;
+    box-shadow: 0 0 7px #0003;
+    overflow: hidden;
+}
+
+header {
+    padding: 20px 5%;
+}
+
+footer {
+    padding: 10px 5%;
+}
+
+header .title {
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+div.container {
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+}
+
+div.create_link {
+
+}
+
+div.create_link a {
+    text-decoration: none;
+}
+
+div.create_link a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* 一覧 */
+div.post_box {
+    width: 1000px;
+    margin: 40px auto;
+}
+
+div.post-data {
+    overflow: hidden;
+}
+
+div.post-data h2 {
+    width: 90%;
+    margin: 20px auto 10px;
+    padding: 0 0 5px;
+    border-bottom: 1px dotted #cccccc;
+    font-size: 125%;
+}
+
+div.post-data ul {
+    margin: 0 auto;
+    font-size: 85%;
+}
+
+div.post-data li {
+    margin: 0px auto 36px;
+    background: rgba( 255, 255, 255, 1.0 );
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+    padding: 40px;
+    max-height: 300px;
+}
+
+div.post-data .post-data-time {
+    width: 100%;
+    display: table;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #cccccc;
+}
+
+div.post-data .post-data-time p {
+    vertical-align: bottom;
+}
+
+div.post-data li .post-data-content {
+    padding: 24px 0 36px;
+    display: flex;
+}
+
+div.post-data li dl {
+    display: flex;
+    width: 100%;
+}
+
+div.post-data li dl dt .post-data-image {
+    max-width: 200px;
+    display: block;
+}
+
+div.post-data li dl dd {
+    margin-left: 16px;
+    width: 70%;
+}
+
+div.post-data li .btn_box {
+    width: 100px;
+    text-align: right;
+}
+
+div.post-data li a.edit ,
+div.post-data li form.deleteform button {
+    display: inline-block;
+    color: #ffffff;
+    line-height: 1;
+    padding: 9px 9px;
+    border-radius: 3px;
+    font-family: inherit;
+}
+
+div.post-data li a.edit {
+    background: #5cb85c;
+    border: 1px solid #4cae4c;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+div.post-data li form.deleteform button {
+    background: #337ab7;
+    border: 1px solid #2e6da4;
+}
+
+
+
+
+/* 新規投稿,編集 */
+div.create_box,
+div.edit_box  {
+    width : 1000px;
+    margin : 40px auto;
+    padding: 20px 5%;
+    background: rgba( 255, 255, 255, 1.0 );
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+}
+
+div.create_box .title,
+div.edit_box .title {
+    padding: 20px 5%;
+    font-size: 1.6rem;
+    overflow: hidden;
+}
+
+form.form-area dl {
+    width: 90%;
+    margin: 0 auto;
+}
+
+form.form-area dl:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+form.form-area dl dt:first-child, form.form-area dl dt:first-child+dd {
+    border: none;
+}
+
+form.form-area dl dt {
+    clear: both;
+    width: 30%;
+    float: left;
+    border-top: 1px solid #cccccc;
+    padding: 20px 0;
+    text-align: right;
+    border: none;
+
+}
+
+form.form-area dl dt span.required {
+    background: #d9534f;
+    border: 1px solid #d43f3a;
+}
+
+form.form-area dl dt span.any {
+    background: #337ab7;
+    border: 1px solid #2e6da4;
+}
+
+form.form-area dl dt span.required,
+form.form-area dl dt span.any {
+    display: block;
+    float: left;
+    color: #ffffff;
+    line-height: 1;
+    padding: 9px 9px;
+    border-radius: 3px;
+    font-family: inherit;
+}
+
+form.form-area dl dt:first-child, form.form-area dl dt:first-child+dd {
+    border: none;
+}
+
+form.form-area dl dd {
+    width: 65%;
+    float: left;
+    border-top: 1px solid #cccccc;
+    padding: 25px 0 20px 5%;
+}
+
+form.form-area .postdate label {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-right: 8px;
+}
+
+form.form-area .postdate label:last-child {
+    margin-right: 0;
+}
+
+form.form-area .postdate select::after {
+    position: absolute;
+    right: 15px;
+    width: 10px;
+    height: 7px;
+    background-color: #535353;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+    pointer-events: none;
+}
+
+form.form-area .postdate select {
+    appearance: none;
+    min-width: 130px;
+    height: 2.8em;
+    padding: .4em calc(.8em + 30px) .4em .8em;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #333333;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form.form-area input[type="text"] {
+    width: calc( 100% - 4% - 2px );
+    padding: 7px 2%;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #fafafa;
+    -webkit-appearance: none;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+form.form-area textarea {
+    display: block;
+    width: calc( 100% - 4% - 2px );
+    height: 200px;
+    padding: 7px 2%;
+    resize: vertical;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #fafafa;
+    -webkit-appearance: none;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+form.form-area .wordcount {
+    margin-top: 6px;
+    font-size: 0.8rem;
+}
+
+form.form-area .diaryimage {
+    max-width: 200px;
+    margin-bottom: 24px;
+}
+
+form.form-area p.submit {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-top: 1px solid #cccccc;
+}
+
+form.form-area button[type="submit"] {
+    padding: 11px 20px;
+    vertical-align: middle;
+    line-height: 1;
+    background: #5cb85c;
+    border: 1px solid #4cae4c;
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: inherit;
+    -webkit-appearance: none;
+    font-size: 16px;
+    margin-left: 40%;
+}
+
+.errormessage {
+    color: red;
+    margin-bottom: 8px;
+}
