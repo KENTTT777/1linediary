@@ -13,7 +13,7 @@ class PostController extends Controller
     public function index()
     {
         // 投稿順で5件表示
-        $posts = Post::where('delete_flg',0)->orderBy('created_at', 'desc')->paginate(5);
+        $posts = Post::where('delete_flg',0)->orderByRaw('postdate desc , created_at desc')->paginate(5);
 
         return view('posts.index', compact('posts'));
     }
