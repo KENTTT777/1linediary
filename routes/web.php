@@ -18,11 +18,11 @@ use App\Http\Controllers\PostController;
 // 一覧ページ
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 
-// 登録
+// 新規投稿
 Route::get('/posts/create', [PostController::class, 'create']);
 Route::post('/posts', [PostController::class, 'store']);
 
-// 編集
+// 投稿編集
 Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
 Route::put('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
 

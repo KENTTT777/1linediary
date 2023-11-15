@@ -33,10 +33,6 @@ div.container {
     width: 1000px;
 }
 
-div.create_link {
-
-}
-
 div.create_link a {
     text-decoration: none;
 }
@@ -46,7 +42,7 @@ div.create_link a:hover{
     cursor: pointer;
 }
 
-/* 一覧 */
+/* 一覧ページ */
 div.post_box {
     width: 1000px;
     margin: 40px auto;
@@ -137,9 +133,7 @@ div.post-data li form.deleteform button {
 }
 
 
-
-
-/* 新規投稿,編集 */
+/* 新規投稿,投稿編集 */
 div.create_box,
 div.edit_box  {
     width : 1000px;
@@ -308,6 +302,7 @@ form.form-area button[type="submit"] {
     margin-left: 40%;
 }
 
+/* エラーメッセージ */
 .errormessage {
     color: red;
     margin-top: 6px;

@@ -8,7 +8,7 @@
         </div>
     
         <div class="edit_box">
-            <h2 class="title mb-4">編集</h2>
+            <h2 class="title mb-4">投稿編集</h2>
                 <form action="{{ route('posts.update', $post) }}" method="post" enctype="multipart/form-data" name="editform" id="edit" class="form-area">
                 @csrf
                 @method('PUT')
@@ -48,14 +48,11 @@
                                 @endfor
                             </select>
                         </label>
-                        @if ($errors->has('year'))
-                            <p class="errormessage">{{ $errors->first('year') }}</p>
+                        @if ($errors->has('year')) <p class="errormessage">{{ $errors->first('year') }}</p>
                         @endif
-                        @if ($errors->has('month'))
-                            <p class="errormessage">{{ $errors->first('month') }}</p>
+                        @if ($errors->has('month')) <p class="errormessage">{{ $errors->first('month') }}</p>
                         @endif
-                        @if ($errors->has('day'))
-                            <p class="errormessage">{{ $errors->first('day') }}</p>
+                        @if ($errors->has('day')) <p class="errormessage">{{ $errors->first('day') }}</p>
                         @endif
                     </dd>
 
@@ -68,8 +65,7 @@
                         <div class="wordcount">
                             <p>文字数:<span class="length">0</span>/200</p>
                         </div>
-                        @if ($errors->has('body'))
-                            <p class="errormessage">{{ $errors->first('body') }}</p>
+                        @if ($errors->has('body')) <p class="errormessage">{{ $errors->first('body') }}</p>
                         @endif
                     </dd>
 
@@ -78,12 +74,10 @@
                         <label for="image">イメージ画像</label>
                     </dt>
                     <dd>
-                        @if ($post->image)
-                            <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->name }}_{{ $post->id }}" class="diaryimage">
+                        @if ($post->image) <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->name }}_{{ $post->id }}" class="diaryimage">
                         @endif
                         <input type="file" name="image" id="image" value="{{ old('image', $post->image) }}" accept="image/jpeg">
-                        @if ($errors->has('image'))
-                            <p class="errormessage">{{ $errors->first('image') }}</p>
+                        @if ($errors->has('image')) <p class="errormessage">{{ $errors->first('image') }}</p>
                         @endif
                     </dd>
                 </dl>

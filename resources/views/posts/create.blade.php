@@ -44,14 +44,11 @@
                                 @endfor
                             </select>
                         </label>
-                        @if ($errors->has('year'))
-                            <p class="errormessage">{{ $errors->first('year') }}</p>
+                        @if ($errors->has('year')) <p class="errormessage">{{ $errors->first('year') }}</p>
                         @endif
-                        @if ($errors->has('month'))
-                            <p class="errormessage">{{ $errors->first('month') }}</p>
+                        @if ($errors->has('month')) <p class="errormessage">{{ $errors->first('month') }}</p>
                         @endif
-                        @if ($errors->has('day'))
-                            <p class="errormessage">{{ $errors->first('day') }}</p>
+                        @if ($errors->has('day')) <p class="errormessage">{{ $errors->first('day') }}</p>
                         @endif
                     </dd>
 
@@ -64,8 +61,7 @@
                         <div class="wordcount">
                             <p>文字数:<span class="length">0</span>/200</p>
                         </div>
-                        @if ($errors->has('body'))
-                            <p class="errormessage">{{ $errors->first('body') }}</p>
+                        @if ($errors->has('body')) <p class="errormessage">{{ $errors->first('body') }}</p>
                         @endif
                     </dd>
 
@@ -75,8 +71,7 @@
                     </dt>
                     <dd>
                         <input type="file" name="image" id="image" accept="image/jpeg">
-                        @if ($errors->has('image'))
-                            <p class="errormessage">{{ $errors->first('image') }}</p>
+                        @if ($errors->has('image')) <p class="errormessage">{{ $errors->first('image') }}</p>
                         @endif
                     </dd>
                 </dl>

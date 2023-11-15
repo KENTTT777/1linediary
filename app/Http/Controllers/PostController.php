@@ -12,7 +12,7 @@ class PostController extends Controller
     /*--- 一覧ページ ---*/
     public function index()
     {
-        // 投稿順で5件表示
+        // 日付け順・投稿順で5件表示
         $posts = Post::where('delete_flg',0)->orderByRaw('postdate desc , created_at desc')->paginate(5);
 
         return view('posts.index', compact('posts'));
@@ -56,6 +56,7 @@ class PostController extends Controller
         return redirect()->route('posts.index')->with('success', '投稿しました');
     }
 
+    /*--- 投稿編集ページ ---*/
     public function edit(Post $post)
     {
         // Viewに渡す前に日付けを加工
@@ -97,6 +98,7 @@ class PostController extends Controller
         return redirect()->route('posts.index')->with('success', '編集しました');
     }
 
+    /*--- 削除 ---*/
     public function destroy(Post $post)
     {
         // 投稿削除フラグをたてる
