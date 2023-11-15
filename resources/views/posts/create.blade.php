@@ -45,13 +45,13 @@
                             </select>
                         </label>
                         @if ($errors->has('year'))
-                            <p>{{ $errors->first('year') }}</p>
+                            <p class="errormessage">{{ $errors->first('year') }}</p>
                         @endif
                         @if ($errors->has('month'))
-                            <p>{{ $errors->first('month') }}</p>
+                            <p class="errormessage">{{ $errors->first('month') }}</p>
                         @endif
                         @if ($errors->has('day'))
-                            <p>{{ $errors->first('day') }}</p>
+                            <p class="errormessage">{{ $errors->first('day') }}</p>
                         @endif
                     </dd>
 
@@ -65,7 +65,7 @@
                             <p>文字数:<span class="length">0</span>/200</p>
                         </div>
                         @if ($errors->has('body'))
-                            <p>{{ $errors->first('body') }}</p>
+                            <p class="errormessage">{{ $errors->first('body') }}</p>
                         @endif
                     </dd>
 
@@ -76,7 +76,7 @@
                     <dd>
                         <input type="file" name="image" id="image" accept="image/jpeg">
                         @if ($errors->has('image'))
-                            <p>{{ $errors->first('image') }}</p>
+                            <p class="errormessage">{{ $errors->first('image') }}</p>
                         @endif
                     </dd>
                 </dl>
